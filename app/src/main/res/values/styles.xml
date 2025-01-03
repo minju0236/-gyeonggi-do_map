@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Custom" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ActionBar 배경 색상 -->
+        <item name="colorPrimary">#29ACA6</item>
+        <item name="colorPrimaryDark">#29ACA6</item>
+        <item name="colorAccent">#29ACA6</item>
+    </style>
+</resources>

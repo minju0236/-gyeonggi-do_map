@@ -1,0 +1,116 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 검색바 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="찾으시는 관광지 및 문화시설을 입력하세요"
+            android:textSize="14dp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="검색"
+            android:background="#D8D4C7"/>
+    </LinearLayout>
+
+    <!-- 지도 Fragment -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        map:cameraTargetLat="37.541"
+        map:cameraTargetLng="126.986"
+        map:cameraZoom="13" />
+
+    <!-- 버튼 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 이전 버튼 -->
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="이전"
+            android:background="#78C3B6"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="10dp"/>
+
+        <!-- 다음 버튼 -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="다음"
+            android:background="#78C3B6"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!-- 즐겨찾기 버튼 -->
+        <Button
+            android:id="@+id/favoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="즐겨찾기"
+            android:background="#D8D4C7"
+            android:textColor="#FFFFFF"
+            android:layout_marginHorizontal="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal">
+        <DatePicker
+            android:datePickerMode="spinner"
+            android:id="@+id/datePicker1"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:calendarViewShown="false" />
+
+        <EditText
+            android:id="@+id/edtDiary"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:lines="8"
+            android:hint="한줄평 메모"
+            android:textSize="15dp">
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:background="#EFEFE9"
+        android:textColor="@color/black"
+        android:text="저장하기" />
+
+</LinearLayout>
